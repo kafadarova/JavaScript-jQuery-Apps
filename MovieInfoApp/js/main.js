@@ -84,10 +84,10 @@ function getMovie() {
         </div>
       </div>
       `;
-
+    // Append the output the the div with the ID movie
     $('#movie').html(output);
         })
-    .catch((err) =>{
+    .catch((err) =>{ // If there is some error 
       console.log(err);
     });
 }
