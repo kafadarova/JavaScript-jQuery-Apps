@@ -13,6 +13,36 @@ $('#searchUser').on('keyup', (e) => {
      client_secret: '099e76bcbc76c4c691f89b39b1605a3b21ba39c9'
    }
  }).done((user) => { // Receive the user object
+   $.ajax({
+     url: url + username + '/repos',
+     data:{
+       client_id: '2c61e32576705b129895',
+       client_secret: '099e76bcbc76c4c691f89b39b1605a3b21ba39c9',
+       sort: 'created: asc', // Sort the repos by date
+       per_page: 5
+      }
+   }).done((repos) => {
+     $.each(repos, (index, repo) => {
+       // Use append not html so we can add a text, not rewrrite it
+       $('#repos').append(`
+         <div class="well">
+          <div class="row">
+          <div class="col-md-7">
+          <strong>${repo.name}</strong>: ${repo.description}
+          </div>
+          <div class="col-md-3">
+            <span class="badge badge-dark">Forks: ${repo.forks_count}</span>
+            <span class="badge badge-primary">Watcher: ${repo.watchers_count}</span>
+            <span class="badge badge-success">Stars: ${repo.stargezers_count}</span>
+          </div>
+          <div class="col-md-2">
+            <a href="${repo.html_url}" target="_blank" btn btn-default>Repo Page</a>
+          </div>
+          </div>
+         </div>
+         `);
+     });
+   });
    $('#profile').html(`
      <div class="panel panel-default">
         <div class="panel-heading">
