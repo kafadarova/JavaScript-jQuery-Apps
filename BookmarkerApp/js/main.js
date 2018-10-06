@@ -40,4 +40,17 @@ function fetchBookmarks(){
   // Fetch from localStorage (get them from it)
   // Turn the string back to json
   let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+
+  // Get output
+  let bookmarksResults = document.getElementById('bookmarksResults')
+
+  // Build output
+  bookmarksResults.innerHTML = '';
+
+  for(let i=0, i< bookmarks.length; i++){
+    let name = bookmarks[i].name;
+    let url = bookmarks[i].url;
+
+    bookmarksResults.innerHTML +=``;
+  }
 }
