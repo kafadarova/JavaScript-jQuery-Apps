@@ -34,3 +34,10 @@ console.log(bookmark);
 // Prevent form from submitting
 e.preventDefault();
 }
+
+// Fetch bookmarks
+function fetchBookmarks(){
+  // Fetch from localStorage (get them from it)
+  // Turn the string back to json
+  let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+}
