@@ -47,10 +47,14 @@ function fetchBookmarks(){
   // Build output
   bookmarksResults.innerHTML = '';
 
-  for(let i=0, i< bookmarks.length; i++){
+  for(let i = 0; i < bookmarks.length; i++){
     let name = bookmarks[i].name;
     let url = bookmarks[i].url;
 
-    bookmarksResults.innerHTML +=``;
+    bookmarksResults.innerHTML += '<div class="well">' +
+                                '<h3>' + name +
+                                ' <a class="btn btn-default" target="_blank" href="'+ url +'">Visit</a> ' +
+                                ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" target="_blank" href="#">Delete</a> ' +
+                                '</h3></div>';
   }
 }
