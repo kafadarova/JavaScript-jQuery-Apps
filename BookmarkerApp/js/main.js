@@ -35,6 +35,11 @@ console.log(bookmark);
 e.preventDefault();
 }
 
+// Delete bookmark
+function deleteBookmark(url){
+console.log(url);
+}
+
 // Fetch bookmarks
 function fetchBookmarks(){
   // Fetch from localStorage (get them from it)
