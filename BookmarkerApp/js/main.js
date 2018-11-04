@@ -6,6 +6,16 @@ function saveBookmark(e) {
 let siteName = document.getElementById('siteName').value;
 let siteUrl = document.getElementById('siteUrl').value;
 
+if(!siteName || !siteUrl){
+  alert('Please fill in the form');
+  return false;
+}
+
+//  Set a new variable to format the url
+let expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+// Create the regular expression
+let regex = new RegExp(expression);
+
 // Create a bookmark object where to store the siteName and siteUrl
 let bookmark = {
   name: siteName,
@@ -30,14 +40,29 @@ if(localStorage.getItem('bookmarks') === null){
   // Reset back to local storage
   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
-console.log(bookmark);
+// Re-fetch bookmarks
+fetchBookmarks();
+
 // Prevent form from submitting
 e.preventDefault();
 }
 
 // Delete bookmark
 function deleteBookmark(url){
-console.log(url);
+// Get bookmarks from Local Storage
+let bookmarks = JSON.parse(localStorage.getItem('bookmarks'));
+// Loop through bookmarks
+for(let i =0; i< bookmarks.length; i++){
+  if(bookmarks[i].url == url){
+    // Remove from array
+    bookmarks.splice(i, 1);
+    }
+  }
+  // Reset back to local storage
+  localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
+
+    // Re-fetch bookmarks
+    fetchBookmarks();
 }
 
 // Fetch bookmarks
@@ -59,7 +84,7 @@ function fetchBookmarks(){
     bookmarksResults.innerHTML += '<div class="well">' +
                                 '<h3>' + name +
                                 ' <a class="btn btn-default" target="_blank" href="'+ url +'">Visit</a> ' +
-                                ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" target="_blank" href="#">Delete</a> ' +
+                                ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
                                 '</h3></div>';
   }
 }
