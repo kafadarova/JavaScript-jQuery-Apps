@@ -6,16 +6,9 @@ function saveBookmark(e) {
 let siteName = document.getElementById('siteName').value;
 let siteUrl = document.getElementById('siteUrl').value;
 
-if(!siteName || !siteUrl){
-  alert('Please fill in the form');
+if(!validateForm(siteName,siteUrl)){
   return false;
 }
-
-//  Set a new variable to format the url
-let expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
-// Create the regular expression
-let regex = new RegExp(expression);
-
 // Create a bookmark object where to store the siteName and siteUrl
 let bookmark = {
   name: siteName,
@@ -40,6 +33,9 @@ if(localStorage.getItem('bookmarks') === null){
   // Reset back to local storage
   localStorage.setItem('bookmarks', JSON.stringify(bookmarks));
 }
+
+// Clear form
+document.getElementById('myForm').reset();
 // Re-fetch bookmarks
 fetchBookmarks();
 
@@ -87,4 +83,23 @@ function fetchBookmarks(){
                                 ' <a onclick="deleteBookmark(\''+url+'\')" class="btn btn-danger" href="#">Delete</a> ' +
                                 '</h3></div>';
   }
+}
+
+// Validate Form
+function validateForm(siteName, siteUrl) {
+  if(!siteName || !siteUrl){
+    alert('Please fill in the form');
+    return false;
+  }
+
+  //  Set a new variable to format the url
+  let expression = /[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi;
+  // Create the regular expression
+  let regex = new RegExp(expression);
+
+  if(!siteUrl.match(regex)){
+    alert('Please use a valid URL.')
+    return false;
+  }
+  return true;
 }
