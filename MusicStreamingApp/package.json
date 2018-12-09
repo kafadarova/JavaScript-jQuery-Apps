@@ -25,10 +25,10 @@
     "browserify": "^13.0.1"
   },
   "dependencies": {
-  "node-soundcloud": "0.0.5",
-  "react": "^0.14.8",
-  "react-dom": "^0.14.8",
-  "react-loading": "0.0.9",
-  "react-soundplayer": "^0.3.6"
-}
+    "node-soundcloud": "0.0.5",
+    "react": "^0.14.8",
+    "react-dom": "^0.14.8",
+    "react-loading": "0.0.9",
+    "react-soundplayer": "^0.3.6"
+  }
 }
