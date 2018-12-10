@@ -1,21 +1,13 @@
 {
   "name": "electron-quick-start",
   "version": "1.0.0",
-  "description": "A minimal Electron application",
+  "description": "Plays music from SoundCloud",
   "main": "main.js",
   "scripts": {
-    "start": "electron ."
+    "compile": "browserify -t [ babelify --presets [ react es2015 ] ] src/app.js -o js/app.js",
+    "start": "electron main.js"
   },
-  "repository": "https://github.com/electron/electron-quick-start",
-  "keywords": [
-    "Electron",
-    "quick",
-    "start",
-    "tutorial",
-    "demo"
-  ],
-  "author": "GitHub",
-  "license": "CC0-1.0",
+  "author": "Kristin Kafadarova",
   "devDependencies": {
     "electron": "^3.0.7",
     "electron-prebuilt": "^1.2.0",
