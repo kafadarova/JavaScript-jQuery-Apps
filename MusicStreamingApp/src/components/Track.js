@@ -6,6 +6,8 @@ import { PlayButton, Progress, Timer } from 'react-soundplayer/components';
 // exporting the class - it can be imported into another file
 export default class Track extends Component{
   render() {
-
+    // extract the information from the props
+    // assign them into variables
+    const { track, soundCloudAudio, playing, seeking, currentTime, duration } = this.props;
   }
 }
