@@ -15,7 +15,7 @@ export default class ProgressSoundPlayer extends Component {
   );
   }
 }
-// props required by the component
+// props required to be passed  in when component is rendered
 ProgressSoundPlayer.propTypes = {
   resolveUrl: PropTypes.string.isRequired,
   clientId: PropTypes.string.isRequired
