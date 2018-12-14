@@ -12,6 +12,11 @@ export default class ProgressSoundPlayer extends Component {
         <SoundPlayerContainer resolveUrl = {resolveUrl} clientId = {clientId}>
       <Track />
     </SoundPlayerContainer>
-    )
+  );
   }
 }
+// props required by the component
+ProgressSoundPlayer.propTypes = {
+  resolveUrl: PropTypes.string.isRequired,
+  clientId: PropTypes.string.isRequired
+};
