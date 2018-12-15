@@ -12,3 +12,12 @@ let client_id = 'YOUR SOUNDCLOUD APP ID';
 SC.init({
   id: client_id
 });
+
+// create main component
+class Main extends Component {
+  // define the constructor
+  constructor(props){
+    // call the  constructor of the Component class and 
+    // any initialization code that the Component class has
+  super();
+}
