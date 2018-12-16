@@ -29,6 +29,17 @@ class Main extends Component {
       hasResults: false, // has the component currently any results from the API
       searchResults: [], // stores the current search results
       isLoading: false // app is currently fetching results from the API or not.
-};
+    };
+
+    // update the query in state
+    handleTextChange(e){
+      this.setState({
+        query: e.target.value
+      });
+      // call the search methon on enter klick 
+      if (e.key === 'Enter'){
+        this.search.call(this);
+      }
+    }
 
 }
