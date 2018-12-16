@@ -15,9 +15,20 @@ SC.init({
 
 // create main component
 class Main extends Component {
+
   // define the constructor
-  constructor(props){
-    // call the  constructor of the Component class and 
+  constructor(props) {
+
+    // call the  constructor of the Component class and
     // any initialization code that the Component class has
-  super();
+    super();
+
+    // set the default state of the app
+    this.state = {
+      query: '', // default search query
+      hasResults: false, // has the component currently any results from the API
+      searchResults: [], // stores the current search results
+      isLoading: false // app is currently fetching results from the API or not.
+};
+
 }
