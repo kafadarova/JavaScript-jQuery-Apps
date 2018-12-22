@@ -45,10 +45,15 @@ class Main extends Component {
     // send the query to the  API and processes the response
     search() {
       // sets the loading state to true
+      // spinner becomes visible
       this.setState({
         isLoading: true
       });
       
+      // get request to tracks
+      SC.get('/tracks', {
+        
+      })
       
     }
 }
