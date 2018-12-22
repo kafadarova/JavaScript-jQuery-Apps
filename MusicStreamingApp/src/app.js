@@ -41,5 +41,14 @@ class Main extends Component {
         this.search.call(this);
       }
     }
-
+    
+    // send the query to the  API and processes the response
+    search() {
+      // sets the loading state to true
+      this.setState({
+        isLoading: true
+      });
+      
+      
+    }
 }
