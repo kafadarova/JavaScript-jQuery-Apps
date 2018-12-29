@@ -52,8 +52,20 @@ class Main extends Component {
       
       // get request to tracks
       SC.get('/tracks', {
-        
-      })
-      
-    }
+        q: this.state.query, 
+        embeddable_by: 'all'
+      }, (err, tracks) => {
+        // update the state 
+        this.setState({
+          hasResults: true,
+          searchResults: tracks,
+          isLoading: false
+        });
+      }
+    });
+  }
+  // renders the UI
+  render() {
+    
+  }
 }
