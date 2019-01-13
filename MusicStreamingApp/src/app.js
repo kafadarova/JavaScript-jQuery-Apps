@@ -66,6 +66,16 @@ class Main extends Component {
   }
   // renders the UI
   render() {
-    
+   return (
+     <div>
+     <h1>Electron SoundCloud Player</h1>
+     <input type="search"
+            onKeyUp={this.handleTextChange.bind(this)}
+            className="search-field"
+            placeholder="Enter song name or artist" />
+    <button className="search-button"
+            onClick={this.search.bind(this)}>Search</button>
+     </div>
+   )
   }
 }
