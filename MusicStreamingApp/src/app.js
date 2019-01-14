@@ -84,4 +84,10 @@ class Main extends Component {
      </div>
    );
   }
+  // called by default since there are no search
+  renderNoSearchResults() {
+    return (
+       <div id="no-results"></div>
+    );
+  }
 }
