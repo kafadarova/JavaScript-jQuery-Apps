@@ -75,7 +75,13 @@ class Main extends Component {
             placeholder="Enter song name or artist" />
     <button className="search-button"
             onClick={this.search.bind(this)}>Search</button>
+    <div class="center">
+    {this.state.isLoading && <Loading type="bars" color="#FFB935" />}
+    </div>
+    {this.state.hasResults && !this.state.isLoading ? 
+    this.renderSearchResults.call(this):
+    this.renderNoSearchResults.call(this)}
      </div>
-   )
+   );
   }
 }
