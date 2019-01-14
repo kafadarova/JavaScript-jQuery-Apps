@@ -90,4 +90,15 @@ class Main extends Component {
        <div id="no-results"></div>
     );
   }
+  
+  // search results to display
+  renderSearchResults() {
+    return (
+      <div id="search-results"> 
+      // loop through all the result
+      // execute the renderPlayer function for each iteration
+      {this.state.searchResults.map(this.renderPlayer.bind(this))}
+      </div>
+    );
+  }
 }
