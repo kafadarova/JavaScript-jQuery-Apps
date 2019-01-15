@@ -101,4 +101,14 @@ class Main extends Component {
       </div>
     );
   }
+  // accepts the individual track object as its argument
+  renderPlayer(track) {
+    return (
+    <ProgressSoundPlayer
+    key = {track.id}
+    client_id = {client_id} // the  SoundCloud API key
+    resolveUrl = {track.permalink.url} // refers to specific audio track
+    />  
+    );
+  } 
 }
