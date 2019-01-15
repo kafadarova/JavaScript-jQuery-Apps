@@ -111,4 +111,7 @@ class Main extends Component {
     />  
     );
   } 
+  // we render the component into the DOM
+  let main = document.getElementById('id');
+  ReactDOM.render(<Main />, main);
 }
