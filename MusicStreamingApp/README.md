@@ -1,3 +1,5 @@
+Using the tutorial  from SitePoint I built a music streaming app with Electron, React & ES6   
+
 # electron-quick-start
 
 **Clone and run for a quick way to see Electron in action.**
