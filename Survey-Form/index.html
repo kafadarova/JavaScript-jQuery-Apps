@@ -2,11 +2,42 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>Survey Form</title>
      <link rel="stylesheet" type="text/css" href="style.css">
   </head>
   <body>
-    
+    <div class="container">
+    <h1 id="title">Survey Form</h1>
+    <div id="description">Please enter the information requested by typing directly onto this form</div>
+    <form id="survey-form" action="index.html" method="GET">
+      <div class="row">
+        <label id="name-label" for="name">Name: </label>
+        <input type="text" name="name" id="name"  placeholder="Enter your name" required autofocus>
+      </div>
+      <div class="row">
+        <label id="surname-label" for="surname">Surname: </label>
+        <input type="text" name="surname" id="surname"  placeholder="Enter your surname" required>
+      </div>
+      <div class="row">
+        <label id="email-label" for="email">Email: </label>
+        <input type="text" name="email" id="email"  placeholder="Enter your email" required>
+      </div>
+      <div class="row">
+        <label id="number-label" for="phone">Phone: </label>
+        <input type="text" name="phone" id="phone"  placeholder="Enter your phone" required>
+      </div>
+      <div class="row">
+        <label for="pricing">Plans & Pricing:</label>
+        <select id="dropdown" name="pricing" class="dropdown">
+          <option disabled value>Select an option</option>
+          <option value="individuals">Individuals</option>
+          <option value="business">Business</option>
+          <option value="students">Students and Teachers</option>
+          <option value="uni">Schools and Universities</option>
+      </select>
+      </div>
+    </form>
+  </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
