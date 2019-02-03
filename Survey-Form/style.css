@@ -1,0 +1,64 @@
+.container {
+  background-color: #ffeab5;
+  text-align: center;
+  font-family: 'Raleway', Helvetica, sans-serif;
+  min-width: 500px;
+  padding: 50px;
+}
+
+.row {
+  margin: 10px;
+}
+
+.labels {
+  display: inline-block;
+  text-align: right;
+  width: 40%;
+  padding: 5px;
+  vertical-align: top;
+  margin-top: 10px;
+}
+
+input{
+  display: inline-block;
+  text-align: left;
+  width: 48%;
+  vertical-align: middle;
+}
+
+ul{
+  display: inline-block;
+  text-align: left;
+  width: 30%;
+  vertical-align: middle;
+}
+
+.userInterests,
+input[type="checkbox"] {
+  float: left;
+  margin-right: 5px;
+}
+.radio, .checkbox {
+  position: relative;
+  left: -43px;
+  margin-left: 10px;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.dropdown {
+  height: 35px;
+  width: 140px;
+  padding: 5px;
+  margin: 10px;  
+  margin-top: 15px;
+  border: 1px solid #c0c0c0;
+  border-radius: 2px;
+}
+
+#suggestions {
+  vertical-align: middle;
+  height: 52px;
+  margin-left: 10px;
+  resize: vertical;
+}

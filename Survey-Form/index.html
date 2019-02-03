@@ -23,8 +23,8 @@
         <input type="text" name="email" id="email"  placeholder="Enter your email" required>
       </div>
       <div class="row">
-        <label id="number-label" for="phone">Phone: </label>
-        <input type="text" name="phone" id="phone"  placeholder="Enter your phone" required>
+        <label id="number-label" for="age">Age: </label>
+        <input type="number" name="age" id="age"  min="1" max="125" placeholder="Enter your age" required>
       </div>
       <div class="row">
         <label for="pricing">Plans & Pricing:</label>
@@ -35,6 +35,29 @@
           <option value="students">Students and Teachers</option>
           <option value="uni">Schools and Universities</option>
       </select>
+      </div>
+      <div class="row">
+        <label class="labels" for="sex">Sex: </label>
+        <ul style="list-style: none;">
+            <li class="radio"><label><input name="radio-buttons" value="1"  type="radio">Male</label></li>
+            <li class="radio"><label><input name="radio-buttons" value="2"  type="radio">Female</label></li>
+          </ul>
+      </div>
+      <div class="row">
+        <label class="labels" for="interests">Which type of courses are you interested in? <br>(Check all that apply):</label>
+        <ul id="interests" style="list-style: none;">
+          <li class="checkbox"><label><input name="interests" value="3" type="checkbox" class="userInterests">Acrobat Pro</label></li>
+          <li class="checkbox"><label><input name="interests" value="4" type="checkbox" class="userInterests">Photoshop</label></li>
+          <li class="checkbox"><label><input name="interests" value="5" type="checkbox" class="userInterests">Lightroom CC</label></li>
+          <li class="checkbox"><label><input name="interests" value="6" type="checkbox" class="userInterests">Illustrator</label></li>
+          <li class="checkbox"><label><input name="interests" value="7" type="checkbox" class="userInterests">Premiere Pro</label></li>
+          <li class="checkbox"><label><input name="interests" value="8" type="checkbox" class="userInterests">XD</label></li>
+          <li class="checkbox"><label><input name="interests" value="9" type="checkbox" class="userInterests">Adobe Stock</label></li>
+        </ul>
+      </div>
+      <div class="row">
+          <label for="suggestions">Any Suggestions?</label>
+          <textarea id="suggestions" name="suggestions" placeholder="Enter your suggestions"></textarea>
       </div>
     </form>
   </div>
