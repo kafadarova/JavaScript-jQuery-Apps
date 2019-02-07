@@ -27,6 +27,10 @@
     }
 }
 
+.container {
+  position: relative;
+}
+
 #photoshop {
   width: 30px;
   margin-right: 5px;

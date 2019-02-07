@@ -7,7 +7,7 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="navbar navbar-expand-md navbar-dark bg-dark mb-4" role="navigation">
         <img src="photoshop_icon.svg" alt="Photoshop icon" id="photoshop">
       <a class="navbar-brand" href="#">Photoshop</a>
@@ -17,33 +17,115 @@
       <div class="collapse navbar-collapse" id="navbarCollapse">
           <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                  <a class="nav-link" href="#">What's new<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="#newsroom">What's new<span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
-                  <a class="nav-link" href="http://fontenele.github.io/bootstrap-navbar-dropdowns/" target="_blank">Learn & Support</a>
-              </li>
-              <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Disabled</a>
+                <a class="nav-link" href="#">Learn & Support</a>
               </li>
               <li class="nav-item dropdown">
-                  <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Pricing</a>
-                  <ul class="dropdown-menu" aria-labelledby="dropdown1">
-                      <li class="dropdown-item" href="#"><a>Basic1</a></li>
-                              <li class="dropdown-item" href="#"><a>Premium</a></li>
-
-                          </ul>
-                      </li>
-                  </ul>
-          <form class="form-inline mt-2 mt-md-0">
-              <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-          </form>
+                <a class="nav-link dropdown-toggle" id="dropdown1" data-toggle="dropdown">Pricing</a>
+                <ul class="dropdown-menu" aria-labelledby="dropdown1">
+                  <li class="dropdown-item" href="#"><a>Basic1</a></li>
+                  <li class="dropdown-item" href="#"><a>Premium</a></li>
+                </ul>
+              </li>
+            </ul>
       </div>
   </div>
     </header>
   
     <div class="container">
       
+      <section id="newsroom">
+        <h2>Newsroom - Latest news</h2>
+        <p>Become a part from our community just by entering your email</p>
+        <form id="form">
+          <input name="email" id="email" type="email" placeholder="Enter your email" required/>
+          <input id="submit" type="submit" value="Get Started" class="btn"></input>
+        </form>
+      </section>
+      
+      <section id="tutorials">
+        <div class="tiles-pars">
+          <div class="tile-container">
+            <a href="https://helpx.adobe.com/photoshop/get-started.html?promoid=VPM4KCNL&mv=other">
+            <div class="get-started-icon"></div>
+            <div class="details">
+              <h3>Get Started</h3>
+            </div>
+            </a>
+          </div>
+          <div class="desc">
+            <h2>Get started</h2>
+          </div>
+          <div class="icon">
+            <i class="fa fa-3x fa-truck"></i>
+          </div>
+          <div class="desc">
+            <h2>Tutorials</h2>
+          </div>
+          <div class="icon">
+            <i class="fa fa-3x fa-battery-full" aria-hidden="true"></i>
+          </div>
+          <div class="desc">
+            <h2>User guide</h2>
+          </div>
+        </div>
+  </section>
+
+<section id="how-it-works">
+  <iframe id="video" height="315" src="https://www.youtube-nocookie.com/embed/y8Yv4pnO7qc?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+</section>
+<section id="pricing">
+  <div id="tenor">
+    <div class="level">
+      Tenor Trombone
+    </div>
+    <h2>$600</h2>
+    <ol>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li>
+    </ol>
+    <button class="btn">Select</button>
+  </div>
+  <div id="bass">
+    <div class="level">
+      Bass Trombone
+    </div>
+    <h2>$900</h2>
+    <ol>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum.</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li>
+    </ol>
+    <button class="btn">Select</button>
+  </div>
+  <div id="valve">
+    <div class="level">
+      Valve Trombone
+    </div>
+    <h2>$1200</h2>
+    <ol>
+      <li>Plays similar to a Trumpet</li>
+      <li>Great for Jazz Bands</li>
+      <li>Lorem ipsum dolor.</li>
+      <li>Lorem ipsum.</li>
+    </ol>
+    <button class="btn">Select</button>
+  </div>
+</section>
+<footer>
+  <ul>
+    <li><a href="#">Privacy</a></li>
+    <li><a href="#">Terms</a></li>
+    <li><a href="#">Contact</a></li>
+  </ul>
+ <div>Icons made by <a href="https://www.freepik.com/" title="Freepik">Freepik</a> from <a href="https://www.flaticon.com/" 			    title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" 			    title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
+  <span>Copyright 2016, Original Trombones</span>
+  </footer>
     </div>
     <script type="text/javascript" src="app.js"></script>
   </body>
