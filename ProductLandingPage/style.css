@@ -7,6 +7,11 @@
 body {
   background-color: #d2ffcd !important;
 }
+
+#photoshop {
+  width: 30px;
+  margin-right: 5px;
+}
     
 .navbar .dropdown-toggle, .navbar .dropdown-menu a {
     cursor: pointer;
@@ -148,22 +153,103 @@ input[type="email"] {
   cursor: pointer;
 }
 
+#tutorial {
+  background-image: url("tutorial.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  position: relative;
+  top: 15px;
+  cursor: pointer;
+}
+
+#user-guide-book {
+  background-image: url("user-guide-book.svg");
+  background-repeat: no-repeat;
+  background-size: 40px;
+  width: 40px;
+  height: 40px;
+  margin: auto;
+  position: relative;
+  top: 15px;
+  cursor: pointer;
+}
+
 .details {
   text-align: center;
   padding: 40px 25px;
   overflow: hidden;
 }
 
-#photoshop {
-  width: 30px;
-  margin-right: 5px;
+#beginners {
+  margin: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+#video {
+   max-width: 560px;
+   width: 100%;
+}
+
+#pricing {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#single, #photography, #uni, #creative-cloud {
+  display: flex;
+   flex-direction: column;
+   align-items: center;
+   text-align: center;
+   width: calc(100%  / 3);
+   margin: 10px;
+   border: 1px solid #ffb4c5;
+   border-radius: 3px;   
+}
+
+.desc {
+  padding: 15px 0;
+  width: 100%;
+  text-transform: uppercase;
+  font-weight: 700;
+  background-color: #fcdbe6;
+  color: #a5efbf;
+  height: 100px;
+  margin-bottom: 15px;
+}
+
+.select {
+  border: 1px solid #ffb4c5 !important;
+  border: 0;
+  margin: 15px 0;
+  background-color: #a5efbf !important;
+  font-weight: 400 !important;
 }
 
 li {
   list-style: none;
 }
 
+ol {
+ height: 100px;
+}
+
 a {
   color: #000 !important;
   text-decoration: none !important;
+}
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+}
+
+footer ul a{
+  margin-top: 30px;
+  color: #ffb4c5 !important;
+  padding: 20px;
+  font-weight: 700;
 }
