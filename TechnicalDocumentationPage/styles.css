@@ -92,3 +92,24 @@ section article{
 .punctuation {
     color: rgb(136, 198, 190);
   }
+  
+.keyword {
+    color: rgb(197, 165, 197);
+  }  
+  
+.operator, .entity, .url, .variable {
+    color: rgb(215, 222, 234);
+  }
+  @media only screen and (max-width: 400px) {
+  #main-doc{
+    margin-left:-10px;
+  }
+  .code{
+    margin-left:-20px;
+    width:100%;
+    padding:15px;
+    padding-left:10px;
+    padding-right:45px;
+    min-width:233px;
+  }
+}
