@@ -35,13 +35,11 @@ header{
 }
 #navbar li{
   color: #4d4e53;
-  border:1px solid;
-  border-bottom-width:0px;
   padding:8px;
   padding-left:45px;
   list-style: none;
   position:relative;
- left:-50px;
+  left:-50px;
   width:100%;
 }
 
