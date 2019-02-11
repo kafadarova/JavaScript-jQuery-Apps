@@ -55,8 +55,40 @@ header{
   padding:20px;
   margin-bottom:110px;
 }
+
 section article{
   color: #4d4e53;
   margin:15px;
   font-size:0.96em;
 }
+
+.code {
+  margin-top: 25px;
+  margin-left: -30px;
+  margin-right: -30px;
+  margin-bottom: 25px;
+  padding-left: 15px;
+  padding-right: 15px;
+  color: rgb(255, 255, 255);
+  tab-size: 1.5em;
+  background: rgb(40, 44, 52);
+  border-radius: 10px;
+  overflow: auto;
+}
+
+.code-html {
+  font-size: 14px;
+  line-height: 20px;
+  white-space: pre-wrap;
+  word-break: break-word;
+  height: auto !important;
+  margin: 1rem;
+}
+
+.tag {
+    color: rgb(252, 146, 158);
+}
+
+.punctuation {
+    color: rgb(136, 198, 190);
+  }

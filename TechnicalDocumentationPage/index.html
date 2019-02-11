@@ -35,6 +35,32 @@
       <p>React has been designed from the start for gradual adoption, and you can use as little or as much React as you need. Whether you want to get a taste of React, add some interactivity to a simple HTML page, or start a complex React-powered app, the links in this section will help you get started.</p>
     </article>
   </section>
+  
+  <section class="main-section" id="cdn-link">
+    <header><strong>CDN Links</strong></header>
+    <article>
+      <p>Both React and ReactDOM are available over a CDN.</p>
+      <div class="code" data-language="html">
+        <pre class="code-html"><code class="code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">crossorigin</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react@16/umd/react.development.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span>
+        <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">crossorigin</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>https://unpkg.com/react-dom@16/umd/react-dom.development.js<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span><span class="token script language-javascript"></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">&gt;</span></span></code></pre>
+      </div>
+      <p>The versions above are only meant for development, and are not suitable for production. Minified and optimized production versions of React are available as well.</p>
+    </article>
+  </section>
+  
+  <section class="main-section" id="hello-world">
+    <header><strong>Hello World</strong></header>
+    <article>
+      <p>React is a JavaScript library, and so we’ll assume you have a basic understanding of the JavaScript language.<strong>If you don’t feel very confident, we recommend going through a JavaScript tutorial to check your knowledge level</strong>  and enable you to follow along this guide without getting lost. It might take you between 30 minutes and an hour, but as a result you won’t have to feel like you’re learning both React and JavaScript at the same time.</p>
+      <p>The smallest React example looks like this</p>
+      <div class="code" data-language="html">
+        <pre class="code-html"><code class="code-html">ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Hello, world!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">,</span>
+  document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+      </div>
+      </article>
+  </section>
 </main>
     
   </body>
