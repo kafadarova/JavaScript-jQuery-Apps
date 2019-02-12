@@ -91,16 +91,32 @@ section article{
 
 .punctuation {
     color: rgb(136, 198, 190);
-  }
+}
   
 .keyword {
     color: rgb(197, 165, 197);
-  }  
-  
+} 
+   
+.function {
+    color: rgb(121, 182, 242);
+}
+
+.string {
+    color: rgb(141, 200, 145);
+}
+
+.property, .number, .function-name, .constant, .symbol, .deleted {
+    color: rgb(90, 155, 207);
+}
+.class-name {
+    color: rgb(250, 200, 99);
+}
+
 .operator, .entity, .url, .variable {
     color: rgb(215, 222, 234);
   }
-  @media only screen and (max-width: 400px) {
+  
+@media only screen and (max-width: 400px) {
   #main-doc{
     margin-left:-10px;
   }

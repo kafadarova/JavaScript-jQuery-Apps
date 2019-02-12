@@ -18,11 +18,6 @@
     <a class="nav-link" href="#state" rel="internal"><li>State and Lifecycle</li></a>
     <a class="nav-link" href="#events" rel="internal"><li>Handling Events</li></a>
     <a class="nav-link" href="#conditional" rel="internal"><li>Conditional Rendering</li></a>
-    <a class="nav-link" href="#lists" rel="internal"><li>Lists and Keyss</li></a>
-    <a class="nav-link" href="#forms" rel="internal"><li>Forms</li></a>
-    <a class="nav-link" href="#state-up" rel="internal"><li>Lifting State Up</li></a>
-    <a class="nav-link" href="#composition" rel="internal"><li>Composition vs Inheritance</li></a>
-    <a class="nav-link" href="#thinking" rel="internal"><li>Thinking In React</li></a>
   </ul>
 </nav>
 
@@ -73,7 +68,81 @@
       <p>Unlike browser DOM elements, React elements are plain objects, and are cheap to create. React DOM takes care of updating the DOM to match the React elements.</p> 
     </article>
   </section>
-</main>
-    
+  
+  <section class="main-section" id="components">
+    <header><strong>Components and Props</strong></header>
+    <article>
+      <p>Components let you split the UI into independent, reusable pieces, and think about each piece in isolation. This page provides an introduction to the idea of components. You can find a <a href="https://reactjs.org/docs/react-component.html">detailed component API reference here.</a></p>
+      <p>Conceptually, components are like JavaScript functions. They accept arbitrary inputs (called “props”) and return React elements describing what should appear on the screen.</p>
+      <p><strong>Function and Class Components</strong></p>
+      <p>The simplest way to define a component is to write a JavaScript function:</p>
+      
+      <div class="code" data-language="html">
+        <pre class="code-html"><code class="code-html"><span class="token keyword">function</span> <span class="token function">Welcome</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span><span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Hello, </span><span class="token punctuation">{</span>props<span class="token punctuation">.</span>name<span class="token punctuation">}</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+       <span class="token punctuation">}</span></code></pre>
+    </div>
+  </article>
+  </section>
+  
+  <section class="main-section" id="state">
+    <header><strong>State and Lifecycle</strong></header>
+    <article>
+      <p>Consider the ticking clock example from one of the previous sections. In Rendering Elements, we have only learned one way to update the UI. We call ReactDOM.render() to change the rendered output:</p>
+    <div class="code" data-language="html">
+      <pre class="code-html"><code class="code-html"><span class="token keyword">function</span> <span class="token function">tick</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>
+<span class="token keyword">const</span> element <span class="token operator">=</span> <span class="token punctuation">(</span>
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span><span class="token punctuation">&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Hello, world!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">      </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">It is </span><span class="token punctuation">{</span><span class="token keyword">new</span> <span class="token class-name">Date</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">.</span><span class="token function">toLocaleTimeString</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">}</span><span class="token plain-text">.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">&gt;</span></span><span class="token plain-text"></span>
+<span class="token plain-text">    </span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">&gt;</span></span>
+<span class="token punctuation">)</span><span class="token punctuation">;</span>
+<span class="gatsby-highlight-code-line">  ReactDOM<span class="token punctuation">.</span><span class="token function">render</span><span class="token punctuation">(</span>
+</span><span class="gatsby-highlight-code-line">    element<span class="token punctuation">,</span>
+</span><span class="gatsby-highlight-code-line">    document<span class="token punctuation">.</span><span class="token function">getElementById</span><span class="token punctuation">(</span><span class="token string">'root'</span><span class="token punctuation">)</span>
+</span><span class="gatsby-highlight-code-line">  <span class="token punctuation">)</span><span class="token punctuation">;</span>
+</span><span class="token punctuation">}</span>
+
+<span class="token function">setInterval</span><span class="token punctuation">(</span>tick<span class="token punctuation">,</span> <span class="token number">1000</span><span class="token punctuation">)</span><span class="token punctuation">;</span></code></pre>
+    </div>
+    </article>
+  </section>
+  
+<section class="main-section" id="events">
+    <header><strong>Handling Events</strong></header>
+    <article>
+      <p>Handling events with React elements is very similar to handling events on DOM elements. There are some syntactic differences:</p>
+      <ul>
+        <li>React events are named using camelCase, rather than lowercase.</li>
+        <li>With JSX you pass a function as the event handler, rather than a string.</li>
+      </ul>
+      <p>For example, the HTML:</p>
+      
+      <div class="code" data-language="html">
+        <pre class="code-html"><code class="code-html"><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>button</span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation">=</span><span class="token punctuation">"</span>activateLasers()<span class="token punctuation">"</span></span><span class="token punctuation">&gt;</span></span>
+  Activate Lasers<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>button</span><span class="token punctuation">&gt;</span></span></code></pre>
+    </div>
+  </article>
+  </section>
+  
+  <section class="main-section" id="conditional">
+    <header><strong>Conditional Rendering</strong></header>
+    <article>
+      <p>Conditional rendering in React works the same way conditions work in JavaScript. Use JavaScript operators like if or the conditional operator to create elements representing the current state, and let React update the UI to match them.</p>
+      <p>Consider these two components:</p>
+      
+      <div class="code" data-language="html">
+        <pre class="code-html"><code class="code-html"><span class="token keyword">function</span> <span class="token function">UserGreeting</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Welcome back!</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span>
+
+<span class="token keyword">function</span> <span class="token function">GuestGreeting</span><span class="token punctuation">(</span>props<span class="token punctuation">)</span> <span class="token punctuation">{</span>
+  <span class="token keyword">return</span> <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token plain-text">Please sign up.</span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">&gt;</span></span><span class="token punctuation">;</span>
+<span class="token punctuation">}</span></code></pre>
+    </div>
+  </article>
+  </section>
+  
+  
+</main>    
   </body>
 </html>
