@@ -1,0 +1,93 @@
+html,
+body {
+  text-align: center;
+}
+
+#welcome-section {
+  top: 0;
+  background-image: url('development.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 160px;
+  padding-top: 45vh;
+  color: #E5A88A;
+  text-shadow: 2px 2px #000;
+}
+
+
+nav ul {
+  text-align: right;
+  position: fixed;
+  width: calc(100% - 56px);
+  margin: 0;
+  background-color: #ffbb9a;
+}
+
+nav ul li {
+  display: inline-block;
+  margin: 55px;
+  margin-bottom: 15px;
+  margin-top: 20px;
+}
+
+nav ul li a {
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.work {
+  padding-top: 60px;
+  margin-top: -60px;
+  background-color: #ffeee5;
+}
+
+.work .work-header {
+  margin-top: 50px;
+  color: #000;
+  font-weight: bold;;
+}
+
+.project {
+  text-decoration: none;
+  color: #000;
+  display: inline-block;
+  overflow: hidden;
+  border: 2px solid #ffbb9a;
+  height: 220px;
+  width: 280px;
+  margin: 40px 100px;
+}
+
+.project-pic {
+  width: 100%;
+  height: 180px;
+  border-bottom: 2px solid #ffbb9a;
+}
+
+.project-title {
+  color: #E5A88A;
+  text-shadow: 1.5px 1.5px #000;
+}
+
+.show-all {
+  text-decoration: none;
+  display: block;
+  width: 200px;
+  height: 30px;
+  margin: 20px auto 90px;
+  background-color: #ffbb9a;
+  color: #7f5d4d;
+  font-weight: bold;
+  font-size: 1em;
+  border: 2px solid #7f5d4d;
+  border-radius: 4px;
+  cursor: pointer;
+  padding-top:10px;
+}
+
+
+.show-all:hover {
+  background: #E4F1FE;
+  color: green;
+}
