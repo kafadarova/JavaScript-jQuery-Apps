@@ -37,6 +37,7 @@ nav ul li a {
 }
 
 .work {
+  height: fit-content;
   padding-top: 60px;
   margin-top: -60px;
   background-color: #ffeee5;
@@ -90,4 +91,29 @@ nav ul li a {
 .show-all:hover {
   background: #E4F1FE;
   color: green;
+}
+
+@media only screen and (max-width: 500px) {
+  nav ul {
+    text-align: center;
+  }
+  nav ul li {
+    margin: 20px;
+  }
+  .project {
+    margin: 40px 0;
+  }
+}
+
+#contact {
+  background-color: #9adeff;
+  padding-bottom: 40px;
+ }
+
+ .header {
+  padding: 30px;
+ }
+ 
+#github {
+  width: 200px;
 }
